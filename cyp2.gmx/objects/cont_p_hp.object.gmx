@@ -25,17 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Health bar:
+            <string>if(instance_exists(obj_player))
+{
+//Health bar:
     //Red part (health missing)
 draw_sprite(sp_p_hp_red, 1, view_xview[0]+8, view_yview[0]+8);
     //Green part (health left)
-draw_sprite_ext(sp_p_hp_green, 1, view_xview[0]+8, view_yview[0]+8, global.p_hp/100,1,0,c_white,1);
+draw_sprite_ext(sp_p_hp_green, 1, view_xview[0]+8, view_yview[0]+8, obj_player.hp/3,1,0,c_white,1);
     //Health bar border
 draw_sprite(sp_p_hp_bg, 1, view_xview[0]+5, view_yview[0]+5);
     //Health bar text
 draw_set_color(c_black);
-draw_text(view_xview[0]+6, view_yview[0]+17, "HP: " + string(global.p_hp));
-
+draw_text(view_xview[0]+6, view_yview[0]+17, "HP: " + string(obj_player.hp));
+}
 key_restart = gamepad_button_check_pressed(0, gp_select);
 if(key_restart){room_restart();}
 

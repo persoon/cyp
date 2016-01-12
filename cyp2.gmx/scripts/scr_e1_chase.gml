@@ -8,4 +8,5 @@ else
     if(image_index < 4){image_index = 4;}
     //this is where damage elements for chase come into play:
     scr_e_pointy();
+    scr_e_ledge_awareness();
 }
