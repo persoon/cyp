@@ -6,10 +6,11 @@ var moving_down    = yprevious < y;
 
 if     (moving_down && right_was_free && !right_is_free)
 {
-    for(i = 0; position_meeting(    x+7, y+1+i, par_collide); i++){} //moving sprite to wall
-    for(j = 0; position_meeting(x+(5+j),   y+2, par_collide); j++){}
-    y += i;
-    x += j;
+    ledge = instance_place(x+7, y+2, par_collide);
+    ledge_left = ledge.x - ledge.sprite_width/2; //top right is the ledge;
+    ledge_top  = ledge.y - ledge.sprite_height/2;
+    x = ledge_left - 5; //this is the coordinates the player grabs on the ledge
+    y = ledge_top - 2;
     
     state = pstate.hanging;
     scr_p_state_init();
@@ -17,10 +18,11 @@ if     (moving_down && right_was_free && !right_is_free)
 }
 else if(moving_down && left_was_free && !left_is_free)
 {
-    for(i = 0; !position_meeting(    x-7, y+1+i, par_collide); i++){}
-    for(j = 0; !position_meeting(x-(5+j),   y+2, par_collide); j++){}
-    y += i;
-    x -= j;
+    ledge = instance_place(x-7, y+2, par_collide);
+    ledge_right = ledge.x + ledge.sprite_width/2;
+    ledge_top  = ledge.y - ledge.sprite_height/2;
+    x = ledge_right + 5;
+    y = ledge_top - 2;
     
     state = pstate.hanging;
     scr_p_state_init();

@@ -22,8 +22,15 @@ enum pstate
     hanging,
     attack,
     air_attack
-}
-
+};
+enum estate
+{
+    idle,
+    air,
+    search,
+    chase,
+    attack
+};
 
 room_goto(room_next(room));</code>
   <enableViews>0</enableViews>

@@ -1,6 +1,7 @@
+//sprite_index = spr_player_1;
 if(xsp == 0)
 {
-    image_speed = 0.05;
+    image_speed = 0.02;
     if(round(image_index) > 3){image_index = 0;}
 }
 else

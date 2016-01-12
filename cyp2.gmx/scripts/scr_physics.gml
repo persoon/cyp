@@ -10,7 +10,7 @@ if(place_meeting(round(x+xsp), round(y), par_collide))
     }
     xsp = 0;
 }
-
+x += xsp;
 if(place_meeting(round(x), round(y+ysp), par_collide))
 {
     while(!place_meeting(round(x), round(y+sign(ysp)), par_collide))
@@ -20,5 +20,4 @@ if(place_meeting(round(x), round(y+ysp), par_collide))
     ysp = 0;
 }
 if(xsp != 0){image_xscale = sign(xsp);} //flips image in direction moving
-x += xsp;
 y += ysp;

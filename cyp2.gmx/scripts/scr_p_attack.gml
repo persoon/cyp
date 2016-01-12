@@ -6,6 +6,18 @@ if(old_attack_number != attack_number)
     else{attack[old_attack_number] = 0;}
     old_attack_number = attack_number;
 }
+else
+{
+    if(xsp != 0)
+    {
+        sprite_index = spr_player_1_sword_run;
+    }
+    else
+    {
+        sprite_index = spr_player_1_sword;
+    }
+}
+
 attack_number = floor(image_index/4);
 if(key_attack) //register another attack
 {
