@@ -1,4 +1,4 @@
-if(!instance_exists(obj_player) || distance_to_object(obj_player) > idle_distance){state = estate.idle;}
+if(!instance_exists(obj_player) || distance_to_object(obj_player) > idle_distance){state = estate.idle;chasing = false;}
 else if(!place_meeting(round(x), round(y+1), par_collide)){state = estate.air;}
 else
 {

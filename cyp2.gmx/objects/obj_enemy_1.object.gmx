@@ -32,13 +32,14 @@ damage = 1;
 movespeed = 1;
 
 chase_distance = 75; // THIS NUMBER MUST BE HIGHER THAN IDLE_DISTANCE
-idle_distance  = 200;
+idle_distance  = 400;
 
 //initializing variables
 xsp = 0;
 ysp = 0;
 hp_old = hp;
 invulnerable = false;
+chasing = false;
 state = estate.idle;
 </string>
           </argument>
