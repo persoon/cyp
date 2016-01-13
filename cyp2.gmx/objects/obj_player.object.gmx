@@ -39,6 +39,7 @@ scr_p_state_init();
 damage_dir = 0;
 invulnerable = false;
 knockback = 1;
+attack_number = 0;
 xsp = 0;
 ysp = 0;
 </string>

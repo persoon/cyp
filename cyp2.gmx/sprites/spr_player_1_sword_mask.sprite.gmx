@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>25</bbox_left>
-  <bbox_right>36</bbox_right>
+  <bbox_left>30</bbox_left>
+  <bbox_right>38</bbox_right>
   <bbox_top>2</bbox_top>
   <bbox_bottom>25</bbox_bottom>
   <HTile>0</HTile>
@@ -32,5 +32,8 @@
     <frame index="9">images\spr_player_1_sword_mask_9.png</frame>
     <frame index="10">images\spr_player_1_sword_mask_10.png</frame>
     <frame index="11">images\spr_player_1_sword_mask_11.png</frame>
+    <frame index="12">images\spr_player_1_sword_mask_12.png</frame>
+    <frame index="13">images\spr_player_1_sword_mask_13.png</frame>
+    <frame index="14">images\spr_player_1_sword_mask_14.png</frame>
   </frames>
 </sprite>

@@ -37,9 +37,16 @@ draw_sprite(sp_p_hp_bg, 1, view_xview[0]+5, view_yview[0]+5);
     //Health bar text
 draw_set_color(c_black);
 draw_text(view_xview[0]+6, view_yview[0]+17, "HP: " + string(obj_player.hp));
+draw_text(view_xview[0]+5, view_yview[0]+30, "att_num:  " + string(obj_player.attack_number));
+for(i = 7; obj_player.state == pstate.attack &amp;&amp; obj_player.image_index &gt;= 7 &amp;&amp; i &lt; 18; i++)
+{
+    if(obj_player.image_index &gt;= i){draw_text(view_xview[0]+5, view_yview[0]-100+(20 * i), "img_ind:  " + string(i));}
+}
 }
 key_restart = gamepad_button_check_pressed(0, gp_select);
 if(key_restart){room_restart();}
+
+
 
 /*
 enemy = instance_nearest(obj_player.x, obj_player.y, obj_enemy_2);
